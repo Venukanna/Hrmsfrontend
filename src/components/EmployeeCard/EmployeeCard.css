@@ -1,0 +1,21 @@
+/* EmployeeCard.css */
+.employee-card {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  flex: 1;
+}
+
+.employee-card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+.employee-card p {
+  margin: 0.5rem 0 0;
+  font-size: 1.5rem;
+  color: #3498db;
+}

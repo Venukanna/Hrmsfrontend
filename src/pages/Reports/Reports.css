@@ -1,0 +1,14 @@
+/* Reports.css */
+.reports {
+  padding: 2rem;
+}
+
+.reports h1 {
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.report-list {
+  display: flex;
+  gap: 1rem;
+}

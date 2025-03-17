@@ -1,0 +1,5 @@
+com\example\hrmanagement\HrManagementApplication.class
+com\example\hrmanagement\model\LeaveRequest.class
+com\example\hrmanagement\controller\LeaveRequestController.class
+com\example\hrmanagement\repository\LeaveRequestRepository.class
+com\example\hrmanagement\service\LeaveRequestService.class

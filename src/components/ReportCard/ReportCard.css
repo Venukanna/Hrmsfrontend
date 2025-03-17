@@ -1,0 +1,27 @@
+/* ReportCard.css */
+.report-card {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1;
+}
+
+.report-card h3 {
+  margin: 0;
+  color: #2c3e50;
+}
+
+.report-card p {
+  margin: 0.5rem 0;
+  color: #7f8c8d;
+}
+
+.report-card button {
+  padding: 0.5rem 1rem;
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
