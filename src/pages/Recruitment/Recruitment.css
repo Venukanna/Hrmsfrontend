@@ -1,14 +1,134 @@
-/* Recruitment.css */
-.recruitment {
-  padding: 2rem;
+/* General Styles */
+.recruitment-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #f9f9f9, #e6f4ff);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.recruitment h1 {
-  margin-bottom: 1rem;
-  color: #2c3e50;
+/* Recruitment Features Section */
+.recruitment-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
 }
 
-.job-openings {
-  display: flex;
-  gap: 1rem;
+.feature {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+}
+
+.feature:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.feature .icon {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  color: #007bff;
+  background: linear-gradient(135deg, #007bff, #00bfff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.feature h2 {
+  margin-top: 0;
+  font-size: 1.5em;
+  color: #333;
+  background: linear-gradient(135deg, #007bff, #00bfff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.feature p {
+  color: #666;
+  line-height: 1.5;
+  font-size: 0.95em;
+}
+
+/* Employee Directory Section */
+.employee-directory {
+  text-align: center;
+  margin-top: 40px;
+  padding: 30px;
+  background: linear-gradient(135deg, #007bff, #00bfff);
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.employee-directory h3 {
+  margin: 0;
+  font-size: 1.8em;
+}
+
+.employee-directory p {
+  margin: 10px 0 20px;
+  font-size: 1.1em;
+}
+
+.employee-directory a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: white;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.employee-directory a:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Colorful Feature Backgrounds */
+.feature:nth-child(1) {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+}
+
+.feature:nth-child(2) {
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+}
+
+.feature:nth-child(3) {
+  background: linear-gradient(135deg, #84fab0, #8fd3f4);
+}
+
+.feature:nth-child(4) {
+  background: linear-gradient(135deg, #ffc3a0, #ffafbd);
+}
+
+.feature:nth-child(5) {
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+}
+
+.feature:nth-child(6) {
+  background: linear-gradient(135deg, #f6d365, #fda085);
+}
+
+.feature:nth-child(7) {
+  background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+}
+
+.feature:nth-child(8) {
+  background: linear-gradient(135deg, #96fbc4, #f9f586);
+}
+
+.feature:nth-child(9) {
+  background: linear-gradient(135deg, #fddb92, #d1fdff);
+}
+
+.feature:nth-child(10) {
+  background: linear-gradient(135deg, #f6e6b4, #a3a1f7);
 }

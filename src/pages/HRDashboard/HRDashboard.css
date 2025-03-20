@@ -37,13 +37,14 @@
 }
 
 /* HRDashboard.css */
-.hr-dashboard {
+.hr-attendance-dashboard {
   padding: 2rem;
   background: linear-gradient(135deg, #f8f9fa, #e9ecef);
   min-height: 100vh;
 }
 
-.hr-dashboard h1 {
+
+.hr-attendance-dashboard h1 {
   font-size: 2.5rem;
   color: #f4f5f7;
   margin-bottom: 2rem;
@@ -53,6 +54,7 @@
   letter-spacing: 2px;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
 }
+
 
 .dashboard-grid {
   display: grid;
@@ -157,7 +159,3 @@
     font-size: 1.3rem;
   }
 }
-
-
-
-
