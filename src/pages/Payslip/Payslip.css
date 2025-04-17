@@ -1,16 +1,366 @@
-.payslip {
-  padding: 20px;
-  background-color: #f9f9f9;
+/* Payslip Styles */
+:root {
+  --primary: #4361ee;
+  --primary-light: #4895ef;
+  --secondary: #3f37c9;
+  --accent: #f72585;
+  --dark: #2c3e50;
+  --light: #f8f9fa;
+  --gray: #6c757d;
+  --success: #2ecc71;
+  --warning: #f39c12;
+  --danger: #e74c3c;
+}
+
+.payslip-container {
+  font-family: 'Inter', sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: var(--dark);
+}
+
+.payslip-header {
+  margin-bottom: 2rem;
+}
+
+.payslip-header h1 {
+  font-size: 2.2rem;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.payslip-header p {
+  color: var(--gray);
+  font-size: 1.1rem;
+}
+
+.payslip-selector {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.selector-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.selector-card h2 {
+  font-size: 1.3rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--dark);
+}
+
+.payslip-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.payslip-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.02);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.payslip-item:hover {
+  background: rgba(67, 97, 238, 0.05);
+}
+
+.payslip-item.active {
+  background: var(--primary);
+  color: white;
+}
+
+.payslip-item.active .payslip-status {
+  color: white;
+}
+
+.payslip-month {
+  font-weight: 500;
+  flex: 1;
+}
+
+.payslip-amount {
+  font-weight: 600;
+  margin: 0 1rem;
+}
+
+.payslip-status {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.payslip-status.paid {
+  background: rgba(46, 204, 113, 0.1);
+  color: var(--success);
+}
+
+.payslip-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-self: flex-start;
+  position: sticky;
+  top: 2rem;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.action-btn.download {
+  background: var(--primary);
+  color: white;
+}
+
+.action-btn.print {
+  background: white;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.action-btn.email {
+  background: var(--success);
+  color: white;
+}
+
+.action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.payslip-details {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.payslip-summary {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.summary-header h2 {
+  margin: 0;
+  color: var(--dark);
+}
+
+.summary-date {
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+.employee-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.info-label {
+  font-size: 0.9rem;
+  color: var(--gray);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.info-value {
+  font-weight: 500;
+}
+
+.net-pay {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.breakdown-section {
+  margin-bottom: 1.5rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(67, 97, 238, 0.05);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.section-header:hover {
+  background: rgba(67, 97, 238, 0.1);
+}
+
+.section-header h3 {
+  margin: 0;
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.toggle-icon {
+  color: var(--gray);
+}
+
+.section-content {
+  margin-top: 1rem;
+}
+
+.breakdown-table {
+  border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
-.payslip h1 {
-  font-size: 24px;
-  margin-bottom: 10px;
+.table-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: rgba(0, 0, 0, 0.02);
+  font-weight: 500;
 }
 
-.payslip p {
-  font-size: 16px;
-  color: #555;
+.header-cell {
+  padding: 1rem;
+  text-align: left;
+}
+
+.table-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.table-cell {
+  padding: 1rem;
+}
+
+.table-row.total {
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.payslip-total {
+  margin-top: 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 1.5rem;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+
+.total-label {
+  font-weight: 500;
+}
+
+.total-value {
+  font-weight: 500;
+}
+
+.net-total {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dashed rgba(0, 0, 0, 0.1);
+}
+
+.net-total .total-label {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.net-total .total-value {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--primary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .payslip-container {
+    padding: 1rem;
+  }
+
+  .payslip-selector {
+    grid-template-columns: 1fr;
+  }
+
+  .payslip-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: static;
+    margin-top: 1rem;
+  }
+
+  .employee-info {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .employee-info {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
 }

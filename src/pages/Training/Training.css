@@ -1,14 +1,252 @@
-/* Training.css */
-.training {
+/* Base Styles */
+.training-container {
   padding: 2rem;
+  font-family: 'Inter', -apple-system, sans-serif;
+  color: #2d3748;
+  background-color: #f5f7fa;
+  min-height: 100vh;
 }
 
-.training h1 {
-  margin-bottom: 1rem;
-  color: #2c3e50;
+.training-header {
+  margin-bottom: 2rem;
 }
 
-.training-modules {
+.training-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a365d;
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Search and Filter */
+.training-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.search-bar {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border-radius: 12px;
+  border: none;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+
+.search-bar input:focus {
+  outline: none;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #718096;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.7);
+  color: #4a5568;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filter-btn.active {
+  background: #4299e1;
+  color: white;
+}
+
+.filter-btn:hover {
+  background: #e2e8f0;
+}
+
+.filter-btn.active:hover {
+  background: #3182ce;
+}
+
+/* Stats Cards */
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.stat-card h3 {
+  font-size: 1rem;
+  color: #718096;
+  margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a365d;
+}
+
+/* Training Grid */
+.training-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.training-card {
+  padding: 1.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.training-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.category-icon {
+  font-size: 1.5rem;
+  color: #4299e1;
+}
+
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.status-badge.completed {
+  background: #c6f6d5;
+  color: #22543d;
+}
+
+.status-badge.pending {
+  background: #feebc8;
+  color: #7b341e;
+}
+
+.training-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #1a365d;
+}
+
+.card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  color: #4a5568;
+  font-size: 0.9rem;
+}
+
+.card-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #edf2f7;
+  font-size: 0.85rem;
+  color: #718096;
+}
+
+.action-btn {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 1.5rem;
+  border-radius: 8px;
+  border: none;
+  background: #4299e1;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.action-btn:hover {
+  background: #3182ce;
+}
+
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 2rem;
+  color: #718096;
+}
+
+/* Glassmorphism Effect */
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .training-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .training-controls {
+    gap: 1rem;
+  }
+  
+  .filter-buttons {
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+  
+  .training-grid {
+    grid-template-columns: 1fr;
+  }
 }

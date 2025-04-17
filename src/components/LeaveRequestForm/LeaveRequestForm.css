@@ -1,4 +1,4 @@
-/* LeaveRequestForm.css */
+/* LeaveRequestForm.css
 .leave-request-form {
   max-width: 500px;
   margin: 0 auto;
@@ -35,4 +35,354 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
+} */
+
+
+/* :root {
+  --primary: #4361ee;
+  --primary-light: #4895ef;
+  --secondary: #3f37c9;
+  --dark: #212529;
+  --light: #f8f9fa;
+  --gray: #6c757d;
+  --success: #4cc9f0;
+  --danger: #f72585;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --transition: all 0.3s ease;
+}
+
+.leave-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #f5f7fa;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.leave-form-card {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 500px;
+  transition: var(--transition);
+}
+
+.leave-form-card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.form-header {
+  color: var(--dark);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.leave-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-field label {
+  font-weight: 500;
+  color: var(--dark);
+  font-size: 0.9rem;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--border-radius);
+  font-size: 0.95rem;
+  transition: var(--transition);
+  background-color: var(--light);
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 3px rgba(72, 149, 239, 0.2);
+  background-color: white;
+}
+
+.form-field textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.date-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.submit-btn {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.85rem;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.submit-btn:hover {
+  background-color: var(--secondary);
+  transform: translateY(-2px);
+}
+
+.submit-btn:disabled {
+  background-color: var(--gray);
+  cursor: not-allowed;
+  transform: none;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .leave-form-container {
+    padding: 1rem;
+  }
+  
+  .leave-form-card {
+    padding: 1.5rem;
+  }
+  
+  .date-fields {
+    grid-template-columns: 1fr;
+  }
+} */
+
+:root {
+  --primary: #4361ee;
+  --primary-light: #4895ef;
+  --secondary: #3f37c9;
+  --dark: #212529;
+  --light: #f8f9fa;
+  --gray: #6c757d;
+  --light-gray: #e9ecef;
+  --success: #4cc9f0;
+  --danger: #f72585;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --transition: all 0.3s ease;
+}
+
+.leave-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #f5f7fa;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.leave-form-card {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 500px;
+  transition: var(--transition);
+}
+
+.leave-form-card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.form-header {
+  color: var(--dark);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.leave-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-field label {
+  font-weight: 500;
+  color: var(--dark);
+  font-size: 0.9rem;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--border-radius);
+  font-size: 0.95rem;
+  transition: var(--transition);
+  background-color: var(--light);
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 3px rgba(72, 149, 239, 0.2);
+  background-color: white;
+}
+
+.form-field textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.date-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.submit-btn {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.85rem;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.submit-btn:hover {
+  background-color: var(--secondary);
+  transform: translateY(-2px);
+}
+
+.submit-btn:disabled {
+  background-color: var(--gray);
+  cursor: not-allowed;
+  transform: none;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+}
+
+/* Additional info styles */
+.additional-info {
+  border-top: 1px solid var(--light-gray);
+  padding-top: 1.5rem;
+  color: var(--dark);
+}
+
+.additional-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.policy-list {
+  margin-bottom: 1.5rem;
+  padding-left: 1.25rem;
+}
+
+.policy-list li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.contact-info {
+  background-color: var(--light);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+}
+
+.contact-info h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.contact-info a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .leave-form-container {
+    padding: 1rem;
+  }
+  
+  .leave-form-card {
+    padding: 1.5rem;
+  }
+  
+  .date-fields {
+    grid-template-columns: 1fr;
+  }
 }

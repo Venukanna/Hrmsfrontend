@@ -1,0 +1,154 @@
+/* ===== Modern Glass Morphism Design ===== */
+:root {
+    --primary: #4361ee;
+    --primary-light: #4895ef;
+    --secondary: #3f37c9;
+    --dark: #1e293b;
+    --light: #f8fafc;
+    --glass: rgba(255, 255, 255, 0.15);
+  }
+  
+  /* Base Styles */
+  .about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 2rem;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  /* Glass Card */
+  .glass-card {
+    background: var(--glass);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 1.5rem;
+    padding: 3rem;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 
+      0 8px 32px rgba(31, 38, 135, 0.1),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .glass-card h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    line-height: 1.2;
+  }
+  
+  .glass-card p {
+    color: var(--dark);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+  }
+  
+  /* Stats Grid */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+  }
+  
+  .stat-item {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .stat-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  .stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--light);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0.5rem;
+  }
+  
+  .stat-label {
+    font-size: 0.9rem;
+    color: var(--light);
+    opacity: 0.9;
+    letter-spacing: 0.5px;
+  }
+  
+  /* CTA Button */
+  .cta-button {
+    background: linear-gradient(90deg, var(--primary), var(--primary-light));
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 
+      0 4px 6px rgba(67, 97, 238, 0.2),
+      0 0 0 2px rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.5s;
+  }
+  
+  .cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 
+      0 10px 20px rgba(67, 97, 238, 0.3),
+      0 0 0 2px rgba(255, 255, 255, 0.3);
+  }
+  
+  .cta-button:hover::before {
+    left: 100%;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .glass-card {
+      padding: 2rem;
+    }
+    
+    .glass-card h2 {
+      font-size: 2rem;
+    }
+    
+    .stats-grid {
+      grid-template-columns: 1fr;
+    }
+  }

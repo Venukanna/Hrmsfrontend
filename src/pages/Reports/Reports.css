@@ -1,14 +1,242 @@
 /* Reports.css */
-.reports {
+:root {
+  --primary-color: #4361ee;
+  --secondary-color: #3a0ca3;
+  --text-color: #2d3748;
+  --background-light: rgba(255, 255, 255, 0.85);
+}
+
+.reports-container {
   padding: 2rem;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color);
 }
 
-.reports h1 {
-  margin-bottom: 1rem;
-  color: #2c3e50;
+.reports-header {
+  margin-bottom: 2rem;
 }
 
-.report-list {
+.reports-header h1 {
+  font-size: 2rem;
   display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--primary-color);
+}
+
+.reports-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
   gap: 1rem;
+}
+
+.search-bar {
+  position: relative;
+  flex-grow: 1;
+  max-width: 400px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  background: var(--background-light);
+  backdrop-filter: blur(10px);
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #718096;
+}
+
+.filter-options {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  background: var(--background-light);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s;
+}
+
+.filter-btn.active {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: var(--background-light);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.stat-card h3 {
+  font-size: 1rem;
+  color: #718096;
+  margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.stat-trend {
+  font-size: 0.75rem;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.stat-trend.up {
+  color: #10b981;
+}
+
+.stat-trend.down {
+  color: #ef4444;
+}
+
+.reports-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.report-card {
+  padding: 1.5rem;
+  border-radius: 16px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.report-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.file-type {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.file-type.pdf {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.file-type.csv {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.status-badge.generated {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-badge.pending {
+  background: #fef9c3;
+  color: #854d0e;
+}
+
+.status-badge.archived {
+  background: #e0e7ff;
+  color: #3730a3;
+}
+
+.card-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.meta-item {
+  text-align: center;
+}
+
+.meta-item span {
+  display: block;
+  font-size: 0.75rem;
+  color: #718096;
+}
+
+.meta-item p {
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
+
+.download-btn {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: none;
+  background: var(--primary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: background 0.3s;
+}
+
+.download-btn:hover {
+  background: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+  .reports-controls {
+    flex-direction: column;
+  }
+  
+  .search-bar {
+    width: 100%;
+    max-width: none;
+  }
+  
+  .filter-options {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
