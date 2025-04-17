@@ -13,7 +13,7 @@ import Performance from './pages/Performance/Performance';
 import Training from './pages/Training/Training';
 import Reports from './pages/Reports/Reports';
 import Payroll from './pages/Payroll/Payroll';
-import Attendance from './pages/HrAttendance/Attendance';
+import Attendance from './pages/HrAttendance/attendance';
 import Payslip from './pages/Payslip/Payslip';
 import LeaveManagement from './pages/LeaveManagement/LeaveManagement';
 import AttendanceManagement from './pages/AttendanceManagement/AttendanceManagement';
