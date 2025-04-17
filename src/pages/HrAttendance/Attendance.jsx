@@ -1,9 +1,7 @@
-
-
 import React, { useState, useEffect } from 'react';
-import './attendance.css'; // Ensure this CSS file is imported
+import './attendance.css'; // Ensure this file exists in the same directory
 
-const HRDashboard = () => {
+const Attendance = () => {
   const [leaveRequests, setLeaveRequests] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -12,7 +10,7 @@ const HRDashboard = () => {
     const fetchLeaveRequests = async () => {
       try {
         const response = await fetch('https://hrmsbackend-ci5t.onrender.com/api/leave-requests/', {
-          credentials: 'include', // Include if using cookies
+          credentials: 'include',
         });
 
         if (response.ok) {
@@ -41,9 +39,9 @@ const HRDashboard = () => {
   }
 
   return (
-    <div className="hr-dashboard">
-      <h2>HR Dashboard - Leave Requests</h2>
-      <table>
+    <div className="attendance-container">
+      <h2>Leave Requests Management</h2>
+      <table className="attendance-table">
         <thead>
           <tr>
             <th>Employee Name</th>
@@ -59,12 +57,11 @@ const HRDashboard = () => {
             <tr key={request.id}>
               <td>{request.employeeName}</td>
               <td>{request.leaveType}</td>
-              <td>{request.startDate}</td>
-              <td>{request.endDate}</td>
+              <td>{new Date(request.startDate).toLocaleDateString()}</td>
+              <td>{new Date(request.endDate).toLocaleDateString()}</td>
               <td>{request.reason}</td>
-              {/* Updated Status Cell */}
               <td>
-                <span className="status" data-status={request.status}>
+                <span className={`status-badge status-${request.status.toLowerCase()}`}>
                   {request.status}
                 </span>
               </td>
@@ -76,4 +73,4 @@ const HRDashboard = () => {
   );
 };
 
-export default HRDashboard;
+export default Attendance;
