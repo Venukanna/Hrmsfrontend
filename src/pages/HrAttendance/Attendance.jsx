@@ -9,7 +9,7 @@ const Attendance = () => {
   useEffect(() => {
     const fetchLeaveRequests = async () => {
       try {
-        const response = await fetch('https://hrmsbackend-ci5t.onrender.com/api/leave-requests/', {
+        const response = await fetch('https://hrmsbackend-ci5t.onrender.com/api/leave-requests', {
           credentials: 'include',
         });
 
