@@ -1,16 +1,66 @@
-# React + Vite
+Hrmsfrontend
+Description
+A full-featured HR Management System (HRMS) dashboard built using React and Vite. Designed for modern organizations to streamline and automate HR tasks including attendance tracking, leave management, payroll reporting, and employee directory.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+✨ Features
+Employee attendance tracking
 
-Currently, two official plugins are available:
+Leave request and approval system
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Employee directory/dashboard
 
-## Expanding the ESLint configuration
+Payroll reporting interface
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-"# Hrmsfrontend" 
-"# Hrmsfrontend" 
-"# Hrmsfrontend" 
-"# Hrmsfrontend" 
+User authentication UI (frontend)
+
+Responsive dashboard layout (mobile and desktop supported)
+
+🛠️ Tech Stack
+Frontend: React 18, Vite
+
+State Management: React Context API
+
+Styling: CSS Modules & Modern CSS (Flexbox, Grid)
+
+Routing: React Router v6+
+
+🏗️ Project Structure
+text
+src/
+  assets/           // Static images and icons
+  components/       // Dashboard and form UI components
+  context/          // Context API for global state management
+  pages/            // Attendance, Leave, Employee Directory, etc.
+  App.jsx           // Root component
+  main.jsx          // App entry point
+  styles/           // Global and modular CSS
+🚀 Getting Started
+Clone the repository:
+
+text
+git clone https://github.com/Venukanna/Hrmsfrontend.git
+cd Hrmsfrontend
+Install dependencies:
+
+text
+npm install
+Start the development server:
+
+text
+npm run dev
+Build for production:
+
+text
+npm run build
+🤝 Contributing
+Fork this project
+
+Create a new feature branch
+
+Commit and push your changes
+
+Submit a Pull Request
+
+Repository: https://github.com/Venukanna/Hrmsfrontend
+
+This project is developed and maintained by Venu Babu Banala. All rights reserved.
