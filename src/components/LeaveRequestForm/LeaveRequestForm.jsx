@@ -25,8 +25,7 @@ const LeaveRequestForm = React.memo(() => {
       };
 
       try {
-        const response = await fetch('https://hrmsbackend-ci5t.onrender.com/api/leave-requests
-', {
+        const response = await fetch('https://hrmsbackend-ci5t.onrender.com/api/leave-requests', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
